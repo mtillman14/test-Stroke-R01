@@ -1,13 +1,12 @@
-
 # ROSS project configuration file
 name = "test-Stroke-R01"
 version = "0.1.0"
 repository_url = "https://github.com/mtillman14/test-Stroke-R01"
-language = "python"
+language = "matlab"
 authors = [
 
 ]
 dependencies = [
-
+    "load-gaitrite"
 ]
 readme = "README.md"
