@@ -1,2 +1,4 @@
 src/site-packages/*
 .DS_Store
+src/test-Stroke-R01/paths.m
+src/test-Stroke-R01/subjects_to_run.toml

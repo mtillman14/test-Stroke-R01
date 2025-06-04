@@ -7,6 +7,8 @@ authors = [
 
 ]
 dependencies = [
-    "load-gaitrite"
+    "load_gaitrite",
+    "load_xsens",
+    "load_delsys"
 ]
 readme = "README.md"

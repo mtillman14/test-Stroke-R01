@@ -1,0 +1,142 @@
+{    
+    "PATHS": {
+        "ROOT_LOAD": "Y:\\Spinal Stim_Stroke R01\\AIM 1\\Subject Data",
+        "ROOT_SAVE": "Y:\\LabMembers\\MTillman\\SavedOutcomes\\StrokeSpinalStim",
+        "SAVE_FILE_NAME": "Overground_EMG_Kinematics.mat",
+        "CODE_FOLDER_PATH": "Y:\\LabMembers\\MTillman\\GitRepos\\Stroke-R01\\src\\overground",
+        "ALL_DATA_CSV": {
+            "UNMATCHED": "Y:\\LabMembers\\MTillman\\SavedOutcomes\\StrokeSpinalStim\\Overground_EMG_Kinematics\\FromMATLAB\\0_from_matlab_unmatched.csv",
+            "MATCHED": "Y:\\LabMembers\\MTillman\\SavedOutcomes\\StrokeSpinalStim\\Overground_EMG_Kinematics\\FromMATLAB\\0_from_matlab_matched.csv",
+            "TRIAL": "Y:\\LabMembers\\MTillman\\SavedOutcomes\\StrokeSpinalStim\\Overground_EMG_Kinematics\\FromMATLAB\\0_from_matlab_trial.csv",
+            "VISIT":"Y:\\LabMembers\\MTillman\\SavedOutcomes\\StrokeSpinalStim\\Overground_EMG_Kinematics\\FromMATLAB\\0_from_matlab_visit.csv"
+        },
+        "PLOTS": {
+            "ROOT": "Y:\\LabMembers\\MTillman\\GitRepos\\Stroke-R01\\plots",
+            "FILTERED_NON_TIME_NORMALIZED": "Filtered_GaitCycles",
+            "FILTERED_TIME_NORMALIZED": "Filtered_TimeNormalized",
+            "FILTERED_TIME_NORMALIZED_UNSCALED": "Filtered_TimeNormalized_Unscaled"
+        }
+    },
+    "REGEXS": {
+        "SUBJECT_ID": "SS\\d{2}",
+        "INTERVENTIONS": [
+            "\\d+_RMT",
+            "\\d+_TOL",
+            "SHAM[12]"           
+        ],        
+        "PRE_POST": "PRE|POST",
+        "SPEED": "FV|SSV",
+        "TRIAL": "[0-9]+$"
+    },
+    "VIF_CUTOFF": 10,
+    "NUM_POINTS": 101,
+    "INTERVENTION_FOLDERS": [
+        "30_RMT", "30_TOL", "50_RMT", "50_TOL", "SHAM1", "SHAM2"
+    ],
+    "MAPPED_INTERVENTION_FIELDS": [
+        "RMT30", "TOL30", "RMT50", "TOL50", "SHAM1", "SHAM2"
+    ],
+    "TIMEPOINTS": [
+        "PRE", "POST"
+    ],
+    "SPEEDS": [
+        "SSV", "FV"
+    ],
+    "DELSYS_EMG": {
+        "FOLDER_NAME": "Delsys",
+        "FILE_EXTENSION": "*.mat",
+        "SAMPLING_FREQUENCY": 2000,
+        "MUSCLES": [
+            "HAM",
+            "RF",
+            "MG",
+            "TA",
+            "VL"
+        ],
+        "CATEGORICAL_COLUMNS": [
+            "Subject",
+            "Intervention",
+            "PrePost",
+            "Speed",
+            "Trial"
+        ],
+        "SUBJECTS_INTERVENTIONS_TO_FIX": {
+            "SS08": "RMT30",
+            "SS09": "SHAM2",
+            "SS10": [
+                "SHAM2", "RMT30", "RMT50"
+            ]
+        },
+        "FILTER": {
+            "BANDPASS_ORDER": 4,
+            "BANDPASS_CUTOFF": [
+                10, 
+                400
+            ],
+            "LOWPASS_ORDER": 2,
+            "LOWPASS_CUTOFF": 5        
+        },
+        "VAF_THRESHOLD": 0.9
+    },
+    "GAITRITE": {
+        "FOLDER_NAME": "Gaitrite",
+        "FILE_EXTENSION": "*.xlsx",
+        "HEADER_ROW_NUM": 3,
+        "SAMPLING_FREQUENCY": 120,
+        "CATEGORICAL_COLUMNS": [
+            "Subject",
+            "Intervention",
+            "PrePost",
+            "Speed",
+            "Trial"
+        ],
+        "COLUMN_NAMES": {
+            "GAIT_ID": "Gait_Id",
+            "LEFT_RIGHT": "Foot",
+            "HEEL_ON": "HeelOn",
+            "TOE_OFF": "ToeOff",
+            "HEEL_OFF": "HeelOff",
+            "TOE_ON": "ToeOn",
+            "STEP_LENGTH": "Step_length",
+            "SWING_TIME": "Swing_time",            
+            "STEP_TIME": "Step_time",
+            "STANCE_TIME": "Stance_time",
+            "STRIDE_TIME": "Stride_time",
+            "STRIDE_LENGTH": "Stride_length",
+            "STEP_WIDTH": "StepWidth",
+            "STRIDE_WIDTH": "StrideWidth",
+            "STRIDE_VELOCITY": "Stride_velocity",
+            "SINGLE_SUPPORT_TIME": "Supp_time_Single",
+            "DOUBLE_SUPPORT_TIME": "Supp_time_Double"
+        }
+    },    
+    "XSENS": {
+        "FOLDER_NAME": "XSENS",
+        "FILE_EXTENSION": "*.xlsx",
+        "SAMPLING_FREQUENCY": 100,
+        "COLUMN_NAMES": {
+            "RHIP": "Right Hip Flexion/Extension",
+            "RKNEE": "Right Knee Flexion/Extension",
+            "RANKLE": "Right Ankle Dorsiflexion/Plantarflexion",
+            "LHIP": "Left Hip Flexion/Extension",
+            "LKNEE": "Left Knee Flexion/Extension",
+            "LANKLE": "Left Ankle Dorsiflexion/Plantarflexion"
+        },
+        "CATEGORICAL_COLUMNS": [
+            "Subject",
+            "Intervention",
+            "PrePost",
+            "Speed",
+            "Trial"
+        ],
+        "FILTER": {
+            "LOWPASS_CUTOFF": 6,
+            "LOWPASS_ORDER": 4
+        },
+        "JOINTS": [
+            "HIP",
+            "KNEE",
+            "ANKLE"
+        ]
+    }      
+}
