@@ -1,6 +1,6 @@
 [project]
 name = "test_Stroke_R01"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     "Mitchell Tillman",
 ]
