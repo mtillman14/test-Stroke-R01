@@ -1,14 +1,13 @@
-# ROSS project configuration file
-name = "test-Stroke-R01"
+name = "test_Stroke_R01"
 version = "0.1.0"
 repository_url = "https://github.com/mtillman14/test-Stroke-R01"
 language = "matlab"
 authors = [
-
+    "Mitchell Tillman",
 ]
 dependencies = [
     "load_gaitrite",
     "load_xsens",
-    "load_delsys"
+    "load_delsys",
 ]
 readme = "README.md"
